@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>foodhero</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body onload="init()">
+    <header>
+        <h2>foodhero.de</h2>
+        <img src="img/icon.png" width="40px" height="40px">
+        <h3>Casinostraße 40, Koblenz</h3>
+        <i class="fa-solid fa-bars"></i>
+    </header>
+
+    <div class="content">
+        <div class="contentLeft">
+            <div class="restaurantImage"><img src="img/burger.jpg"></div>
+            <div class="restaurantLogo">
+                <h1>Brioche & Beef</h1>
+                <div class="ratingStars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <div class="review">(513 Bewertungen)</div>
+                </div>
+            </div>
+            <div class="menuSection">
+                <div class="ourBurger">Unser Burger</div>
+                <div id="menuCard"></div>
+            </div>
+        </div>
+
+        <div id="mobileCart" class="contentRight">
+            <div class="cart">
+                <div class="shoppingCart">
+                    <p>Warenkorb</p>
+                </div>
+                <div class="cartContent" id="cartContent">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                    <p>Wähle leckere Gerichte aus der Karte und bestelle Dein Menü.</p>
+                </div>
+                <div class="checkOut">
+                    <div class="subtotal">
+                        <span>Zwischensumme</span>
+                        <div id="priceOfSubtotal">0.00 €</div>
+                    </div>
+                    <div class="delivery">
+                        <span>Lieferkosten</span>
+                        <div id="deliveryCosts">4 €</div>
+                    </div>
+                    <div class="inTotal">
+                        <span>Gesamt</span>
+                        <div id="total">0.00 €</div>
+                    </div>
+                    <button class="order">BESTELLEN</button>
+                    <div onclick="closePopup()" class="closeOrder"><i class="fa-solid fa-circle-xmark"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <i onclick="openPopup()" class="fa-solid fa-cart-shopping popup" width="80px" height="80px"></i>
+    </footer>
+</body>
+
+</html>
