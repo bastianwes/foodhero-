@@ -140,16 +140,9 @@ h3 {
 
 .menuAdded {
     padding: 20px 10px 20px 10px;
-    margin: 10px 40px 0px 40px;
+    margin: 10px 40px 10px 40px;
     background-color: white;
     border: 1px solid rgba(235, 235, 235, 1);
-    cursor: pointer;
-}
-
-.menuAdded i {
-    display: flex;
-    justify-content: flex-end;
-    font-size: 30px;
 }
 
 .menuAdded:hover {
@@ -236,6 +229,9 @@ h3 {
 }
 
 .addToMenu {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 30px;
     color: rgb(28, 28, 184);
 }
 
@@ -312,6 +308,10 @@ footer i:hover {
     cursor: pointer;
 }
 
+.blueplus:hover {
+    cursor: pointer;
+}
+
 @media (max-width:970px) {
     .cartItem {
         font-size: 12px;
@@ -355,12 +355,12 @@ footer i:hover {
     }
 
     .contentRight {
-        visibility: hidden;
+        display: none;
         width: 0%;
     }
 
     .openPopup {
-        visibility: visible;
+        display: inline;
         opacity: 91%;
         background: white;
         position: fixed;
@@ -417,7 +417,7 @@ footer i:hover {
 
 @media (min-width:670px) {
     .closeOrder {
-        visibility: hidden;
+        display: none;
     }
 }
 

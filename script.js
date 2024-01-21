@@ -78,8 +78,9 @@ function addToBasket(name, price) {
 function updateCart() {
     let cartContent = document.getElementById("cartContent");
     if (names.length === 0) {
-        cartContent.innerHTML = `<i class="fa-solid fa-bag-shopping">
-        </i><p>Wähle leckere Gerichte aus der Karte und bestelle Dein Menü.</p>`;
+        cartContent.innerHTML = `
+            <i class="fa-solid fa-bag-shopping"></i>
+            <p>Wähle leckere Gerichte aus der Karte und bestelle Dein Menü.</p>`;
     } else {
         cartContent.innerHTML = "";
         for (let i = 0; i < names.length; i++) {
@@ -143,6 +144,14 @@ function load() {
     }
 }
 
+function closeOrder() {
+    names = [];
+    prices = [];
+    amounts = [];
+    updateCart();
+    save();
+}
+
 function openPopup() {
     let popupElement = document.getElementById("mobileCart");
     popupElement.classList.add("openPopup");
@@ -159,11 +168,11 @@ function closePopup() {
 function createHTML(selectMenu) {
     return `
                 <div class="menuAdded">
-                    <i onclick="addToBasket('${selectMenu.name}', '${selectMenu.price}', 1)" class="fa-solid fa-plus addToMenu"></i>
+                    <div class="addToMenu"><i" onclick="addToBasket('${selectMenu.name}', '${selectMenu.price}', 1)" class="fa-solid fa-plus blueplus"></i></div>
                     <div class="name">${selectMenu["name"]}</div>
                     <div class="ingredients">${selectMenu["ingredients"]}</div>
                     <div class="price">${selectMenu["price"]}</div>
-            </div>
+                </div>
   `;
 }
 

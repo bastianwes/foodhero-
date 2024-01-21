@@ -49,7 +49,7 @@
                     <i class="fa-solid fa-basket-shopping"></i>
                     <p>Wähle leckere Gerichte aus der Karte und bestelle Dein Menü.</p>
                 </div>
-                <div class="checkOut">
+                <div id="checkOut" class="checkOut">
                     <div class="subtotal">
                         <span>Zwischensumme</span>
                         <div id="priceOfSubtotal">0.00 €</div>
@@ -62,7 +62,7 @@
                         <span>Gesamt</span>
                         <div id="total">0.00 €</div>
                     </div>
-                    <button class="order">BESTELLEN</button>
+                    <button onclick="closeOrder()" class="order">BESTELLEN</button>
                     <div onclick="closePopup()" class="closeOrder"><i class="fa-solid fa-circle-xmark"></i></div>
                 </div>
             </div>
